@@ -11,10 +11,10 @@ Gen-711-Final-Project/fastp.sh 150 /tmp/gen711_project_data/cyano/fastqs  trimme
 conda activate qiime2-2022.8
 
 qiime tools import \
-    --type SampleData[PairedEndSequencesWithQuality] \
-    --input-format CasavaOneEightSingleLanePerSampleDirFmt \
-    --input-path trimmed_fastq \
-    --output-path output/qiime_file.qza
+--type SampleData[PairedEndSequencesWithQuality] \
+--input-format CasavaOneEightSingleLanePerSampleDirFmt \
+--input-path /home/users/cmg1126/trimmed_fastq \
+--output-path output/qiime_file.qza
     
 
 qiime cutadapt trim-paired \
