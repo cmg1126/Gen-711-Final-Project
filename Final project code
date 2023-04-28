@@ -28,21 +28,21 @@ qiime cutadapt trim-paired \
     --o-trimmed-sequences output/qiime_trimmed.qza
 
 qiime demux summarize \
---i-data qiime_trimmed.qza \
---o-visualization  Gen-711-Final-Project/qiime_visualization.qzv
+--i-data output/qiime_trimmed.qza \
+--o-visualization  output/qiime_visualization.qzv
 
 Denoising
 
 qiime dada2 denoise-paired \
-    --i-demultiplexed-seqs qiime_out/${run}_demux_cutadapt.qza  \
-    --p-trunc-len-f ${trunclenf} \
-    --p-trunc-len-r ${trunclenr} \
+    --i-demultiplexed-seqs output/qiime_trimmed.qza  \
+    --p-trunc-len-f 0 \
+    --p-trunc-len-r 0 \
     --p-trim-left-f 0 \
     --p-trim-left-r 0 \
     --p-n-threads 4 \
-    --o-denoising-stats denoising/denoising-stats.qza \
-    --o-table denoising/feature_table.qza \
-    --o-representative-sequences denoining/rep-seqs.qza
+    --o-denoising-stats output/denoising-stats.qza \
+    --o-table output/feature_table.qza \
+    --o-representative-sequences output/rep-seqs.qza
 
 qiime metadata tabulate \
     --m-input-file denoising/denoising-stats.qza \
