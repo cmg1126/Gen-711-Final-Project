@@ -18,14 +18,14 @@ qiime tools import \
     
 
 qiime cutadapt trim-paired \
-    --i-demultiplexed-sequences qiime_file.qza \
+    --i-demultiplexed-sequences output/qiime_file.qza \
     --p-cores 4 \
     --p-front-f GTGYCAGCMGCCGCGGTAA \
     --p-front-r CCGYCAATTYMTTTRAGTTT \
     --p-discard-untrimmed \
     --p-match-adapter-wildcards \
     --verbose \
-    --o-trimmed-sequences Gen-711-final-Project/qiime_trimmed.qza
+    --o-trimmed-sequences output/qiime_trimmed.qza
 
 qiime demux summarize \
 --i-data qiime_trimmed.qza \
