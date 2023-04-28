@@ -51,3 +51,26 @@ qiime metadata tabulate \
 qiime feature-table tabulate-seqs \
         --i-data denoising/rep-seqs.qza \
         --o-visualization denoising/rep-seqs.qzv
+
+Taxonomy assignment 
+
+qiime feature-classifier classify-consensus-vsearch \
+  --i-query output/rep-seqs.qza \
+  --i-reference-reads <refreads> \
+  --i-reference-taxonomy  <reftax> \
+  --p-maxaccepts 10 \
+  --p-query-cov 0.80 \
+  --p-perc-identity 0.9 \
+  --p-threads 36 \
+  --o-classification output/taxonomy.qza
+
+
+qiime taxa barplot \
+     --i-table output/feature_table-1.qza \
+     --i-taxonomy output/taxonomy.qza \
+     --o-visualization output/my-barplot.qzv
+
+
+
+
+
