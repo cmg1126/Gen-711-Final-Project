@@ -34,13 +34,13 @@ qiime demux summarize \
 Denoising
 
 qiime dada2 denoise-paired \
-    --i-demultiplexed-seqs output/qiime_trimmed.qza  \
+    --i-demultiplexed-seqs denoising/qiime_trimmed.qza  \
     --p-trunc-len-f 0 \
     --p-trunc-len-r 0 \
     --p-trim-left-f 0 \
     --p-trim-left-r 0 \
     --p-n-threads 4 \
-    --o-denoising-stats output/denoising-stats.qza \
+    --o-denoising-stats denoising/denoising-stats.qza \
     --o-table output/feature_table.qza \
     --o-representative-sequences output/rep-seqs.qza
 
@@ -55,20 +55,20 @@ qiime feature-table tabulate-seqs \
 Taxonomy assignment 
 
 qiime feature-classifier classify-consensus-vsearch \
-  --i-query output/rep-seqs.qza \
+  --i-query taxonomy/rep-seqs.qza \
   --i-reference-reads <refreads> \
   --i-reference-taxonomy  <reftax> \
   --p-maxaccepts 10 \
   --p-query-cov 0.80 \
   --p-perc-identity 0.9 \
   --p-threads 36 \
-  --o-classification output/taxonomy.qza
+  --o-classification taxonomy/taxonomy.qza
 
 
 qiime taxa barplot \
-     --i-table output/feature_table-1.qza \
-     --i-taxonomy output/taxonomy.qza \
-     --o-visualization output/my-barplot.qzv
+     --i-table taxonomy/feature_table-1.qza \
+     --i-taxonomy taxonomy/taxonomy.qza \
+     --o-visualization taxonomy/my-barplot.qzv
 
 
 
