@@ -39,3 +39,4 @@ We obtained this plot from running "qiime emporer bipolot" on the core metrics f
 
 ![Screenshot (6)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/e06140aa-29f2-4dc3-a52b-5c798bf01f4c)
 
+We obtained this plot by running "qiime taxa barplot" on our trimmed reads and compared them to a metadatset to indenfiy the taxa in our sample. This is a barplot of the bacterial composition in the samples, msot notably purple is cyanobacteria. 
