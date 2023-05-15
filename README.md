@@ -31,7 +31,8 @@ After this a taxonomical comaprison was done between our data and a refrence dat
 
 ![Screenshot (5)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/324c7c7a-540b-4c6f-8785-e061a931729f)
 
-We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reds from our data to a set of metadata. This plot represents the how the bacterial community changes based on collection date. 
+We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reads from our data to a set of metadata. This plot represents the how the bacterial community changes based on collection date. 
 
 ![emperor.png](https://github.com/cmg1126/Gen-711-Final-Project/blob/main/emperor.png)
 
+We obtained this plot from running "qiime emporer bipolot" on the core metrics folder whic comapred the rreads from our data to a metadata set. This is a PCA of bacterial communites, each color represents a different month during the summer. 
