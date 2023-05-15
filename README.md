@@ -33,3 +33,5 @@ After this a taxonomical comaprison was done between our data and a refrence dat
 
 We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reds from our data to a set of metadata. This plot represents the how the bacterial community changes based on collection date. 
 
+![emperor.png](https://github.com/cmg1126/Gen-711-Final-Project/blob/main/emperor.png)
+
