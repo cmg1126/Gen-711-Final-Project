@@ -12,13 +12,26 @@ We were interested in the cyanobacteria research conducted by Valdez-Cano et al 
 
 # Methods
 
+We downloaded our sequences from /tmp/gen711_project_data/cyano/fastqs using the ron supercomputer and the data was in fastqz format
+
+First we trimmed off the poly g tail from the reads which are commonly found on nova-seq data, using a fastp script which required the poly g cutoff length, whcih reads to trim, and an output directory yo store the trimmed reads in. 
+
+We ran the rest of analysis of the trimmed data using the qiime 2022.8 program loaded on the conda environement. 
+
+First we put our reads into a qiime file using the "qiime tools import" command to condense the fastq files inot one .qza file. 
+
+To further trim the sequences, we used cutadapt in qiime to remove the primer sequences from all the reeads in the .qza file. To visualize this file we then ran "demux summarize" command to make a summary.qza file that is viewable. 
+
+The next step is to denoise the data using "dada2 denoise-paired" in qiime which is a program that will use the eroror rate and base call quality of the data then try to correct the errors in it. This also gives us an output with all ASV's that can be viewed in multiple human readable formats after exporting out fo the .qza format
+
+
 
 
 # Findings
 
 
 
-# figure
+
 
 
 
