@@ -37,9 +37,5 @@ We obtained this plot from running qiime diversity "alpha-group-significance" on
 
 We obtained this plot from running "qiime emporer bipolot" on the core metrics folder whic comapred the rreads from our data to a metadata set. This is a PCA of bacterial communites, each color represents a different month during the summer. 
 
-
-
-
-
-
+![Screenshot (6)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/e06140aa-29f2-4dc3-a52b-5c798bf01f4c)
 
