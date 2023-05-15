@@ -30,5 +30,6 @@ The next step is to denoise the data using "dada2 denoise-paired" in qiime which
 # Findings
 
 ![Screenshot (5)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/324c7c7a-540b-4c6f-8785-e061a931729f)
-![Screenshot (3)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/4efc0704-b3ca-42de-8fd6-9588dd1b2487)
+
+We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reds from our data to a set of metadata. This plot represents the how the bacterial community changes based on collection date. 
 
