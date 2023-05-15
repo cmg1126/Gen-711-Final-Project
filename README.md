@@ -24,7 +24,7 @@ To further trim the sequences, we used cutadapt in qiime to remove the primer se
 
 The next step is to denoise the data using "dada2 denoise-paired" in qiime which is a program that will use the eroror rate and base call quality of the data then try to correct the errors in it. This also gives us an output with all ASV's that can be viewed in multiple human readable formats after exporting out fo the .qza format
 
-
+After this a taxonomical comaprison was done between our data and a refrence data base to identify the depsices present in our datasets. Using "qiime feature-classifier classify-sklearn" and "qiime taza barplot" we were able to create a graph displaying all concnetrations of organsims present in each sample.
 
 
 # Findings
@@ -32,4 +32,6 @@ The next step is to denoise the data using "dada2 denoise-paired" in qiime which
 ![Screenshot (5)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/324c7c7a-540b-4c6f-8785-e061a931729f)
 
 We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reds from our data to a set of metadata. This plot represents the how the bacterial community changes based on collection date. 
+
+![emperor.png](https://github.com/cmg1126/Gen-711-Final-Project/blob/main/emperor.png)
 
