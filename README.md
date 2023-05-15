@@ -26,6 +26,10 @@ The next step is to denoise the data using "dada2 denoise-paired" in qiime which
 
 After this a taxonomical comaprison was done between our data and a refrence data base to identify the depsices present in our datasets. Using "qiime feature-classifier classify-sklearn" and "qiime taza barplot" we were able to create a graph displaying all concnetrations of organsims present in each sample.
 
+for further analysis and pot generation for the data, more commands were used in the qiime environment in order to create a core-metrics folder with "qiime phylogeny align-to-tree-mafft-fasttree" and "qiime phylogeny align-to-tree-mafft-fasttree" with an output folder of core-metrics. 
+
+Once this folder is made, a multitude of plots can be amde with the data in qiime, the ones we used were from "qiime diversity alpha-group-significance" and "qiime emperor biplot" commands which generated a barplot and PCA plot respictvelty. Each plot was mad ebby using the trimmed rreads from our data and comparing them to a metadataset. 
+
 
 # Findings
 
