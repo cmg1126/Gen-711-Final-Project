@@ -29,7 +29,7 @@ The next step is to denoise the data using "dada2 denoise-paired" in qiime which
 
 # Findings
 
-
+Screenshot (5).png
 
 
 
