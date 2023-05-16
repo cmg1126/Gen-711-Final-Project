@@ -23,6 +23,8 @@ First we put our reads into a qiime file using the "qiime tools import" command 
 
 To further trim the sequences, we used cutadapt in qiime to remove the primer sequences from all the reeads in the .qza file. To visualize this file we then ran "demux summarize" command to make a summary.qza file that is viewable and human readable.
 
+*These viewable files can be found in the output folder*
+
 The next step is to denoise the data using "dada2 denoise-paired" in qiime which is a program that will use the eroror rate and base call quality of the data then try to correct the errors in it. This also gives us an output with all ASV's that can be viewed in multiple human readable formats after exporting out of the .qza format
 
 After this a taxonomical comaprison was done between our data and a refrence data base to identify the species present in our dataset. Using "qiime feature-classifier classify-sklearn" and "qiime taxa barplot" we were able to create a graph displaying all concentrations of organsims present in each sample.
@@ -31,7 +33,7 @@ for further analysis and plot generation for the data, more commands were used i
 
 Once this folder is made, a multitude of plots can be made with the data in qiime, the ones we used were from "qiime diversity alpha-group-significance" and "qiime emperor biplot" commands which generated a barplot and PCA plot respictvelty. Each plot was mad ebby using the trimmed rreads from our data and comparing them to a metadataset. 
 
-All of the real code for any given command here can be found in the "Final Project Code" file
+*The real code for any command in this section can be found in the "Final Project Code" file*
 
 # Findings
 
