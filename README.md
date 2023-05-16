@@ -14,22 +14,23 @@ We were interested in the cyanobacteria research conducted by Valdez-Cano et al 
 
 We downloaded our sequences from /tmp/gen711_project_data/cyano/fastqs using the ron supercomputer and the data was in fastqz format
 
-First we trimmed off the poly g tail from the reads which are commonly found on nova-seq data, using a fastp script which required the poly g cutoff length, whcih reads to trim, and an output directory yo store the trimmed reads in. 
+First we trimmed off the poly g tail from the reads which are commonly found on nova-seq data, using a fastp script which required an input of the poly g cutoff length, which reads to trim, and an output directory to store the trimmed reads in. 
 
-We ran the rest of analysis of the trimmed data using the qiime 2022.8 program loaded on the conda environement. 
+We ran the rest of analysis of the poly g trimmed data using the qiime 2022.8 program loaded on the conda environement. 
 
-First we put our reads into a qiime file using the "qiime tools import" command to condense the fastq files inot one .qza file. 
+First we put our reads into a qiime file using the "qiime tools import" command to condense the fastq files inot one .qza file to run the rest of the commands on.
 
-To further trim the sequences, we used cutadapt in qiime to remove the primer sequences from all the reeads in the .qza file. To visualize this file we then ran "demux summarize" command to make a summary.qza file that is viewable. 
+To further trim the sequences, we used cutadapt in qiime to remove the primer sequences from all the reeads in the .qza file. To visualize this file we then ran "demux summarize" command to make a summary.qza file that is viewable and human readable.
 
-The next step is to denoise the data using "dada2 denoise-paired" in qiime which is a program that will use the eroror rate and base call quality of the data then try to correct the errors in it. This also gives us an output with all ASV's that can be viewed in multiple human readable formats after exporting out fo the .qza format
+The next step is to denoise the data using "dada2 denoise-paired" in qiime which is a program that will use the eroror rate and base call quality of the data then try to correct the errors in it. This also gives us an output with all ASV's that can be viewed in multiple human readable formats after exporting out of the .qza format
 
-After this a taxonomical comaprison was done between our data and a refrence data base to identify the depsices present in our datasets. Using "qiime feature-classifier classify-sklearn" and "qiime taza barplot" we were able to create a graph displaying all concnetrations of organsims present in each sample.
+After this a taxonomical comaprison was done between our data and a refrence data base to identify the species present in our dataset. Using "qiime feature-classifier classify-sklearn" and "qiime taxa barplot" we were able to create a graph displaying all concentrations of organsims present in each sample.
 
-for further analysis and pot generation for the data, more commands were used in the qiime environment in order to create a core-metrics folder with "qiime phylogeny align-to-tree-mafft-fasttree" and "qiime phylogeny align-to-tree-mafft-fasttree" with an output folder of core-metrics. 
+for further analysis and plot generation for the data, more commands were used in the qiime environment in order to create a core-metrics folder with "qiime phylogeny align-to-tree-mafft-fasttree" and "qiime phylogeny align-to-tree-mafft-fasttree" with an output folder of core-metrics. 
 
-Once this folder is made, a multitude of plots can be amde with the data in qiime, the ones we used were from "qiime diversity alpha-group-significance" and "qiime emperor biplot" commands which generated a barplot and PCA plot respictvelty. Each plot was mad ebby using the trimmed rreads from our data and comparing them to a metadataset. 
+Once this folder is made, a multitude of plots can be made with the data in qiime, the ones we used were from "qiime diversity alpha-group-significance" and "qiime emperor biplot" commands which generated a barplot and PCA plot respictvelty. Each plot was mad ebby using the trimmed rreads from our data and comparing them to a metadataset. 
 
+All of the real code for any given command here can be found in the "Final Project Code" file
 
 # Findings
 
