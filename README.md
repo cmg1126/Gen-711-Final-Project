@@ -35,12 +35,12 @@ Once this folder is made, a multitude of plots can be amde with the data in qiim
 
 ![Screenshot (5)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/324c7c7a-540b-4c6f-8785-e061a931729f)
 
-We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reads from our data to a set of metadata. This plot represents the how the bacterial community changes based on collection date. 
+We obtained this plot from running qiime diversity "alpha-group-significance" on the core metrics folder which comapred the reads from our data to a set of metadata. This plot represents the how the bacterial community changed based on collection date. 
 
 ![emperor.png](https://github.com/cmg1126/Gen-711-Final-Project/blob/main/emperor.png)
 
-We obtained this plot from running "qiime emporer bipolot" on the core metrics folder whic comapred the rreads from our data to a metadata set. This is a PCA of bacterial communites, each color represents a different month during the summer. 
+We obtained this plot from running "qiime emporer bipolot" on the core metrics folder which comapred the reads from our data to a metadata set. This is a PCA of bacterial communites, each color represents a different month during the summer. 
 
 ![Screenshot (6)](https://github.com/cmg1126/Gen-711-Final-Project/assets/130592752/e06140aa-29f2-4dc3-a52b-5c798bf01f4c)
 
-We obtained this plot by running "qiime taxa barplot" on our trimmed reads and compared them to a metadatset to indenfiy the taxa in our sample. This is a barplot of the bacterial composition in the samples, msot notably purple is cyanobacteria. 
+We obtained this plot by running "qiime taxa barplot" on our trimmed reads and compared them to a metadatset to indentify the taxa in our sample. This is a barplot of the bacterial composition in the samples, most notably purple is cyanobacteria. 
